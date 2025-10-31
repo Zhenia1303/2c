@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Treść Zadania: Kalkulator BMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        .my-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h4 {
+            font-weight: bold;
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .list-disc {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .ml-6 {
+            margin-left: 24px;
+        }
+
+        .ml-10 {
+            margin-left: 40px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="color: darkgreen;">🏋️ Kalkulator BMI</h2>
+    <hr>
+
+    <div class="my-container">
+        <h4 class="font-bold">🌐 Witryna internetowa</h4>
+        <p>Witryna internetowa składa się z trzech podstron:</p>
+        <ul class="list-disc ml-6">
+            <li><b>index.html</b>: Strona główna/kalkulator BMI.</li>
+            <li><b>o-bmi.html</b>: Strona informacyjna o BMI i jego klasyfikacji.</li>
+            <li><b>kontakt.htm</b>: Strona z danymi kontaktowymi.</li>
+        </ul>
+        <p>Strony mają <b>wspólny szablon</b> składający się z sekcji baner, panel-lewy, panel-prawy, stopka.</p>
+    </div>
+
+    <div class="my-container">
+        <h4 class="font-bold">✨ Wspólne cechy witryny (dla wszystkich podstron):</h4>
+        <ul class="list-disc ml-6">
+            <li>zastosowany <b>właściwy standard kodowania</b> polskich znaków;</li>
+            <li>tytuł strony widoczny na karcie przeglądarki: <b>"Kalkulator BMI"</b>;</li>
+            <li>arkusz stylów umieszczony w osobnym pliku o nazwie <b>styl.css</b>;</li>
+            <li>podział strony na bloki: <b>baner, panel-lewy, panel-prawy, stopka</b> (zrealizowany za pomocą
+                znaczników sekcji, np. `div` lub semantycznych);</li>
+            <li>zawartość panelu lewego:
+                <ul class="list-disc ml-10">
+                    <li>nagłówek drugiego stopnia o treści <b>"Wybierz opcję"</b>;</li>
+                    <li>poniżej <b>lista nienumerowana</b> z dwoma elementami będącymi odsyłaczami:
+                        <ul>
+                            <li>"Oblicz BMI" (prowadzi do strony index.html);</li>
+                            <li>"Co to jest BMI?" (prowadzi do strony o-bmi.html);</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>zawartość stopki: nagłówek trzeciego stopnia o treści <b>„Kalkulator BMI”</b>, poniżej paragraf o treści
+                <b>„Zadanie wykonał: ja, człowiek”</b>.
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="my-container">
+        <h4 class="font-bold">🧮 Cechy panelu prawego dla pliku index.html (Kalkulator):</h4>
+        <ul class="list-disc ml-6">
+            <li>Nagłówek pierwszego stopnia o treści <b>"Oblicz swój wskaźnik BMI"</b>.</li>
+            <li>Poniżej <b>formularz</b> zawierający:
+                <ul class="list-disc ml-10">
+                    <li>Paragraf: <b>"Waga (kg):"</b>, a obok <b>pole tekstowe</b>;</li>
+                    <li>Paragraf: <b>"Wzrost (cm):"</b>, a obok <b>pole tekstowe</b>;</li>
+                    <li>Przycisk z tekstem <b>"Oblicz BMI"</b>.</li>
+                    <li>Poniżej paragraf z definiowanym atrybutem id przeznaczony do <b>wyświetlenia wyniku</b>,
+                        początkowo
+                        pusty.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="my-container">
+        <h4 class="font-bold">⚖️ Cechy panelu prawego dla pliku o-bmi.html (Klasyfikacja):</h4>
+        <ul class="list-disc ml-6">
+            <li>Nagłówek drugiego stopnia o treści <b>"Klasyfikacja wskaźnika BMI"</b>.</li>
+            <li>Poniżej <b>tabela</b> z trzema kolumnami: <b>"Wskaźnik BMI"</b>, <b>"Klasyfikacja"</b>, <b>"Ryzyko"</b>.
+            </li>
+        </ul>
+        <div class="flex justify-center">
+            <table style="width: 80%; border: 2px solid #333;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #B3C6D9; border: 2px solid #333;">Wskaźnik BMI</th>
+                        <th style="background-color: #B3C6D9; border: 2px solid #333;">Klasyfikacja</th>
+                        <th style="background-color: #B3C6D9; border: 2px solid #333;">Ryzyko</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Poniżej 18.5</td>
+                        <td>Niedowaga</td>
+                        <td>Zwiększone</td>
+                    </tr>
+                    <tr>
+                        <td>18.5 – 24.9</td>
+                        <td>Waga prawidłowa</td>
+                        <td>Minimalne</td>
+                    </tr>
+                    <tr>
+                        <td>25.0 – 29.9</td>
+                        <td>Nadwaga</td>
+                        <td>Umiarkowane</td>
+                    </tr>
+                    <tr>
+                        <td>Powyżej 30.0</td>
+                        <td>Otyłość</td>
+                        <td>Wysokie</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="my-container">
+        <h4 class="font-bold">📞 Cechy panelu prawego dla pliku kontakt.html:</h4>
+        <ul class="list-disc ml-6">
+            <li>Nagłówek drugiego stopnia o treści <b>"Dane Kontaktowe"</b>.</li>
+            <li>Poniżej jeden paragraf z tekstem "Imię i Nazwisko: Jan Kowalski" i drugi paragraf z tekstem "E-mail:
+                jan.kowalski@przyklad.pl".</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="my-container">
+        <h4 class="font-bold">🎨 Styl CSS witryny (styl.css):</h4>
+        <p class="font-bold">WSZYSTKIE KOLORY POWINNY BYĆ ZADEKLAROWANE POPRZEZ <b>ZMIENNE CSS</b> w sekcji `:root`.</p>
+        <p>Przykładowe zmienne: <code>--baner-color</code>, <code>--panel-lewy-color</code>,
+            <code>--panel-prawy-color</code>, <code>--stopka-color</code>, <code>--hover-color</code>.
+        </p>
+
+        <p class="font-bold">Formatowanie sekcji:</p>
+        <ul class="list-disc ml-6">
+            <li>baner: kolor tła (#4A6572), wysokość 50 px, krój pisma Arial, wyrównanie tekstu do środka;</li>
+            <li>panel lewy: kolor tła (#88B04B), wysokość 600 px, szerokość 25%;</li>
+            <li>panel prawy: kolor tła (#F0F8EA), wysokość 600 px, szerokość 75%, wyrównanie tekstu do środka;</li>
+            <li>stopka: kolor tła (#4A6572), krój pisma Arial, wyrównanie tekstu do prawej strony.</li>
+        </ul>
+
+        <p class="font-bold">Formatowanie znaczników/elementów:</p>
+        <ul class="list-disc ml-6">
+            <li><b>Pola formularza</b>: stała szerokość <b>150px</b>, obramowanie 1px solid.</li>
+            <li><b>Tabela</b>: marginesy zewnętrzne 30px, obramowanie 1px solid, <b>szerokość 80%</b> panelu prawego.
+            </li>
+            <li><b>Wiersze tabeli</b>: w momencie, gdy mysz znajduje się na wierszu, powinien przybrać
+                <b>kolor tła</b> (#00A896) i <b>biały kolor czcionki</b>.
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="my-container">
+        <h4 class="font-bold">💻 Skrypt (JavaScript) - tylko addEventListener</h4>
+        <p>Skrypt jest uruchamiany po naciśnięciu przycisku <b>"Oblicz BMI"</b> na stronie <b>index.html</b>.</p>
+        <p class="font-bold">Działanie skryptu:</p>
+        <ul class="list-disc ml-6">
+            <li><b>Odczytuje</b> wartości wagi (kg) i wzrostu (cm) z pól tekstowych.</li>
+            <li><b>Walidacja:</b>
+                <ul class="list-disc ml-10">
+                    <li>Jeśli <b>którekolwiek pole jest puste</b> LUB wartości są <b>niepoprawne</b>, w miejscu na wynik
+                        wypisuje <b>"Wprowadź poprawne dane!"</b>
+                        czcionką w kolorze <b>czerwonym</b>.
+                    </li>
+                    <li>Jeśli użytkownik wpisał <b>0 w polu wzrost</b>, w miejscu na wynik wypisuje <b>"Ty głuptasie
+                            ^_o!"</b> czcionką w kolorze <b>różowym</b>.
+                    </li>
+                </ul>
+            </li>
+            <li><b>Obliczenie BMI:</b> W innym przypadku oblicza wskaźnik BMI ze wzoru:
+                <pre>BMI = waga (kg) / (wzrost (m))^2</pre>
+                <p style="font-size: small;">(*Wzrost musi być przeliczony z centymetrów na metry. Wartość BMI ma być
+                    zaokrąglona do <b>dwóch miejsc po przecinku</b> (dodatkowe punkty za dwa miejsca po przecinku).</p>
+            </li>
+            <li><b>Wyświetlenie wyniku i klasyfikacji:</b>
+                <ul class="list-disc ml-10">
+                    <li>Wyświetla sformatowany tekst: <b>"Twoje BMI wynosi: [obliczona wartość BMI]"</b>.</li>
+                    <li>Na podstawie wyniku i zasad z tabeli (klasyfikacja), wyświetla:
+                        <ul>
+                            <li><b>BMI &lt; 18.5</b>: <b>"Klasyfikacja: Niedowaga"</b> czcionką <b>niebieską</b>.</li>
+                            <li><b>18.5 &lt; BMI &lt; 24.9</b>: <b>"Klasyfikacja: Waga prawidłowa"</b> czcionką
+                                <b>zieloną</b>.
+                            </li>
+                            <li><b>25.0 &lt; BMI &lt; 29.9</b>: <b>"Klasyfikacja: Nadwaga"</b> czcionką
+                                <b>pomarańczową</b>.
+                            </li>
+                            <li><b>BMI &lt; 30.0</b>: <b>"Klasyfikacja: Otyłość"</b> czcionką <b>czerwoną</b>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
